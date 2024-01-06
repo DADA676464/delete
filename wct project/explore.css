@@ -1,0 +1,132 @@
+html, body{
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(to right, #139c91 0%, #fcff44 100%);
+}
+
+
+
+.topic {
+  text-align: center; 
+}
+
+.topic h1 {
+  animation: slide-in 0.5s ease forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+h1 {
+  text-shadow: 1px 1px 2px #555;
+  background: linear-gradient(to right, #139c91, #fcff44); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box {
+  display: grid; 
+  grid-template-rows: auto 1px auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px; 
+}
+
+.square-container{
+  position: relative;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.square-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.square-container button {
+  position: relative;  
+  left: auto;
+  transform: none;
+}
+
+.square-container button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.picture{
+  width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip: rect(0px, 200px, 200px, 0px);
+      transition: transform 0.3s ease;
+}
+
+.square-container:hover .picture {
+  transform: scale(1.1); 
+}
+
+.line {
+  border-bottom: 1px solid black;
+}
+
+.bottom {
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.rectangle-container {
+  height: 370px;
+  width: 170px;
+  overflow: hidden;
+  border-radius: 15px;
+
+}
+
+.rectangle-container:hover .picture{
+  transform: scale(1.1); 
+}
+
+button {
+  background-color: #139c91;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  text-align: center;  
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0d706f;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
